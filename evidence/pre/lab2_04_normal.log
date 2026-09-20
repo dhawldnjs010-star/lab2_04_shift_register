@@ -1,0 +1,3 @@
+﻿VCD info: dumpfile wave.vcd opened for output.
+LAB2_PASS shift_register4 checks=8
+C:\Users\djawl\lab2_04_shift_register\sim\tb_shift_register4.sv:19: $finish called at 106000 (1ps)

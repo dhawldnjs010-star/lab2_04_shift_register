@@ -1,0 +1,4 @@
+﻿VCD info: dumpfile wave.vcd opened for output.
+LAB2_FAIL input enters MSB time=16000
+FATAL: C:\Users\djawl\lab2_04_shift_register\sim\tb_shift_register4.sv:12: check failed
+       Time: 16000  Scope: tb_shift_register4.check
