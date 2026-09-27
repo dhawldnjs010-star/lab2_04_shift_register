@@ -1,6 +1,6 @@
 # 실험 후 레포트: LAB2-04 시프트 레지스터
 
-작성자: 상혁 (2025440084) / 작성일: `<기입 — 실제 제출일>` / 소스 커밋: `<기입 — evidence·reports 커밋 후 git log에서 확인한 해시>` / 제출 태그: `lab2-04-submit-v1` (evidence/reports를 커밋한 뒤 그 커밋에 `git tag lab2-04-submit-v1` 후 `git push origin lab2-04-submit-v1`로 생성) / GitHub 저장소: `https://github.com/dhawldnjs010-star/lab2_04_shift_register`
+작성자: 상혁 (2025440084) / 작성일: `2026-09-27` / 소스 커밋: [`a5f4798`](https://github.com/dhawldnjs010-star/lab2_04_shift_register/commit/a5f479821d9e74c0c954761c871b30b9cd06560e) / 제출 태그: `lab2-04-submit-v1` (evidence/reports를 커밋한 뒤 그 커밋에 `git tag lab2-04-submit-v1` 후 `git push origin lab2-04-submit-v1`로 생성) / GitHub 저장소: `https://github.com/dhawldnjs010-star/lab2_04_shift_register`
 
 > 실험 후에 채운다. 수행하지 않은 항목은 "미수행"으로 표시하고, 구현 성공을 실물 동작 확인으로 대신하지 않는다. 사전 레포트: [pre](../pre/pre_report.md)
 
@@ -55,7 +55,7 @@
 
 ## 링크
 
-- 소스 커밋 / 제출 태그: `<기입 — 커밋 해시> / lab2-04-submit-v1`
+- 소스 커밋 / 제출 태그: [`a5f4798`](https://github.com/dhawldnjs010-star/lab2_04_shift_register/commit/a5f479821d9e74c0c954761c871b30b9cd06560e) / `lab2-04-submit-v1` (https://github.com/dhawldnjs010-star/lab2_04_shift_register/releases/tag/lab2-04-submit-v1)
 - 사전 레포트: [pre_report.md](../pre/pre_report.md)
 - 실행 로그·파형·사진·영상: `evidence/`
-- GitHub 검증 기록(날짜): `<기입>`
+- GitHub 검증 기록(날짜): 2026-09-27 (push 및 태그 생성 확인)
