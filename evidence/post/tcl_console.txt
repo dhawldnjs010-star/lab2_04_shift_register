@@ -1,0 +1,173 @@
+﻿# LAB2 [04] Vivado Tcl Console log — PC1 (DESKTOP-VM8EHT6, 본인 PC)
+# 원본 Vivado 세션 로그에서 이 실험에 해당하는 구간만 발췌함 (내용 수정 없음)
+#
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 12-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Sep 21 12:55:29 2026
+# Process ID         : 24728
+# Current directory  : C:/Users/박건우/AppData/Roaming/Xilinx/Vivado
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent11116
+# Log file           : C:/Users/박건우/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file       : C:/Users/박건우/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On         : DESKTOP-VM8EHT6
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12450H
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 9126 MB
+# Total Virtual      : 25995 MB
+# Available Virtual  : 12624 MB
+#-----------------------------------------------------------
+
+#==== 프로젝트 생성 · Behavioral 시뮬레이션 · 합성/구현/비트스트림  (원본 454–557행) ====
+create_project lab4_shift_register C:/UOS_ECE_project2/lab2_04_shift_register/vivado -part xc7s75fgga484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2026.1/Vivado/data/ip'.
+add_files -norecurse -scan_for_includes {C:/UOS_ECE_project2/lab2_04_shift_register/src/lab2_shift_register.v C:/UOS_ECE_project2/lab2_04_shift_register/src/input_frontend.v C:/UOS_ECE_project2/lab2_04_shift_register/src/shift_register4.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/UOS_ECE_project2/lab2_04_shift_register/constraints/lab2_shift_register.xdc
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes C:/UOS_ECE_project2/lab2_04_shift_register/sim/tb_shift_register4.sv
+update_compile_order -fileset sim_1
+set_property top tb_shift_register4 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {99999999999ns} -objects [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation  -mode behavioral
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Mon Sep 21 13:42:42 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_shift_register4'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/AMDDesignTools/2026.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_shift_register4' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_shift_register4_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UOS_ECE_project2/lab2_04_shift_register/src/shift_register4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_register4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/UOS_ECE_project2/lab2_04_shift_register/sim/tb_shift_register4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_shift_register4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_shift_register4_behav xil_defaultlib.tb_shift_register4 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_shift_register4_behav xil_defaultlib.tb_shift_register4 xil_defaultlib.glbl -log elaborate.log 
+INFO: [XSIM 43-3493] Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.shift_register4
+Compiling module xil_defaultlib.tb_shift_register4
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_shift_register4_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_shift_register4_behav -key {Behavioral:sim_1:Functional:tb_shift_register4} -tclbatch {tb_shift_register4.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_shift_register4.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 99999999999ns
+LAB2_PASS shift_register4 checks=8
+$finish called at time : 106 ns : File "C:/UOS_ECE_project2/lab2_04_shift_register/sim/tb_shift_register4.sv" Line 20
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_shift_register4_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 99999999999ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_runs synth_1 -jobs 4
+[Mon Sep 21 13:45:01 2026] Launched synth_1...
+Run output will be captured here: C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Mon Sep 21 13:46:16 2026] Launched impl_1...
+Run output will be captured here: C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Sep 21 13:47:22 2026] Launched impl_1...
+Run output will be captured here: C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.runs/impl_1/runme.log
+open_hw_manager
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7s75fgga484-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.637 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/UOS_ECE_project2/lab2_04_shift_register/constraints/lab2_shift_register.xdc]
+Finished Parsing XDC File [C:/UOS_ECE_project2/lab2_04_shift_register/constraints/lab2_shift_register.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.637 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_project
+
+#==== 보드 프로그래밍 (Program Device)  (원본 1154–1191행) ====
+open_project C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2026.1/Vivado/data/ip'.
+open_hw_manager
+update_compile_order -fileset sources_1
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx cs_server v2026.1
+  **** Build Info : #60 | 2026-06-15 19:15 UTC | a9691a9
+    ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/13724327082d01
+set_property PROGRAM.FILE {C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.runs/impl_1/lab2_shift_register.bit} [get_hw_devices xc7s75_0]
+current_hw_device [get_hw_devices xc7s75_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s75_0] 0]
+INFO: [Labtools 27-1434] Device xc7s75 (JTAG device index = 0) is programmed with a design that has no supported soft debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/UOS_ECE_project2/lab2_04_shift_register/vivado/lab4_shift_register.runs/impl_1/lab2_shift_register.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 4542.352 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+INFO: [Labtools 27-1434] Device xc7s75 (JTAG device index = 0) is programmed with a design that has no supported soft debug core(s) in it.
+close_project
